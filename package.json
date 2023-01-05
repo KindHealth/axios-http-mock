@@ -1,14 +1,33 @@
 {
   "name": "axios-http-mock",
   "version": "0.0.1",
+  "main": "dist/index.js",
   "description": "Mock adapter for Axios HTTP requests",
   "repository": "https://github.com/kindhealth/axios-http-mock",
   "author": "Patrick Reagan <patrick.reagan@kindhealth.co>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "yarn test --coverage",
+    "lint": "eslint . --ext .ts",
+    "prebuild": "rimraf dist/",
+    "build": "tsc --build tsconfig.build.json"
+  },
   "devDependencies": {
     "@tsconfig/node18": "^1.0.1",
+    "@types/jest": "^29.2.3",
     "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
+    "@typescript-eslint/parser": "^5.45.1",
+    "eslint": "^8.29.0",
+    "jest": "^29.3.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.2.0",
+    "http-status": "^1.5.3"
   }
 }
